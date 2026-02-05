@@ -1,0 +1,11 @@
+apiVersion: 1
+
+datasources:
+  - name: SQLite_Sample_DB
+    type: frser-sqlite-datasource
+    access: proxy
+    isDefault: true
+    jsonData:
+      # זה הנתיב בתוך הקונטיינר כפי שהגדרנו ב-docker-compose
+      path: /var/lib/sqlite-data/sample_data.db
+    editable: true
